@@ -40,7 +40,15 @@ function loader() {
         delay: 3.5,
         onComplete: function () {
             document.querySelector(".loader").style.display = "none";
+<<<<<<< HEAD
             document.querySelector(".page1").style.display = "block"; // Show Page 1
+=======
+<<<<<<< HEAD
+            document.querySelector(".page1").style.display = "block"; // Show Page 1
+=======
+            document.querySelector(".page1").style.display = "block"; 
+>>>>>>> f7de177 (completed till Page 4)
+>>>>>>> 70ab65f (p)
             page1();
         }
     })
@@ -58,8 +66,18 @@ function loader() {
         delay: 0.5
     })
 }
+<<<<<<< HEAD
 loader();
 // document.querySelector(".loader").style.display = "none";
+=======
+<<<<<<< HEAD
+loader();
+// document.querySelector(".loader").style.display = "none";
+=======
+// loader();
+document.querySelector(".loader").style.display = "none";
+>>>>>>> f7de177 (completed till Page 4)
+>>>>>>> 70ab65f (p)
 
 function page1() {
 
