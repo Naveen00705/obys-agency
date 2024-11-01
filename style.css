@@ -58,6 +58,7 @@ body {
 #line1-part1 h5 {
     text-align: right;
     width: 3.5vw;
+
 }
 
 #line1-part1 h5,
@@ -67,6 +68,10 @@ body {
     font-family: "Italiana", sans-serif;
     font-weight: 100;
     background-color: #000000;
+    font-family: 'silk sarif';
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-style: italic;
 }
 
 .line h2 {
@@ -78,8 +83,9 @@ body {
     background-color: #000000;
 }
 
-@keyframes anime {
+@keyframes animeh3 {
     0% {
+        font-style: italic;
         color: #FFFFFF;
         opacity: 0;
         font-family: 'plain light';
@@ -96,13 +102,15 @@ body {
     50% {
         color: transparent;
         font-family: "serif";
-        -webkit-text-stroke: 0.1px #ffffff;
+        font-style: italic;
+        -webkit-text-stroke: 0.4px #ffffff;
         opacity: 0;
     }
 
     100% {
         color: transparent;
         font-family: "serif";
+        font-style: italic;
         -webkit-text-stroke: 0.1px #ffffff;
         opacity: 1;
     }
@@ -238,8 +246,9 @@ body {
 
 .page-4-content {
     width: 75vw;
-    position: absolute;
-    right: 0;
+    /* position: absolute; */
+    margin-left: 30vw;
+
 }
 
 .page-4-content h1 {
@@ -325,4 +334,79 @@ body {
 .work {
     font-weight: 400;
     margin-bottom: 5vw;
+}
+
+.page-5 {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.page-5 {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.page-5 {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.elem-5 {
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: 1vw;
+}
+
+.elem-5 h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 2px #ffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 10px;
+    animation: anime 10s linear infinite;
+    will-change: transform;
+}
+
+@keyframes anime {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem-5-rev {
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: 0.5vw;
+}
+
+.elem-5-rev h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 2px #ffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 10px;
+    animation: anime 10s linear infinite;
+    will-change: transform;
+    animation-direction: reverse;
+
+}
+
+.elem-5-rev span {
+    font-family: 'silk sarif';
+    font-style: italic;
+    color: transparent;
+}
+
+.elem-5 span {
+    font-family: 'silk sarif';
+    font-style: italic;
+    color: transparent;
 }

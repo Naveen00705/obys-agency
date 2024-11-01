@@ -1,4 +1,5 @@
 function loader() {
+    // document.querySelector(".loader").style.display = "none";
     var tl = gsap.timeline();
 
     tl.from(".line h2", {
@@ -30,7 +31,7 @@ function loader() {
 
     tl.to(".line h3", {
         opacity: 1,
-        animationName: "anime"
+        animationName: "animeh3"
     });
 
     tl.to(".loader", {
@@ -69,11 +70,12 @@ function page1() {
         stagger: 0.2,
         onComplete: function () {
             document.querySelector(".page3").style.display = "block";
+
         }
     });
 }
 
-// page1();
+page1();
 
 function cursor() {
     document.addEventListener("mousemove", function (data) {
