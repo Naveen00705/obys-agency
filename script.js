@@ -66,11 +66,14 @@ function page1() {
         y: 1500,
         opacity: 0,
         duration: 2,
-        stagger: 0.2
+        stagger: 0.2,
+        onComplete: function () {
+            document.querySelector(".page3").style.display = "block";
+        }
     });
 }
 
-page1();
+// page1();
 
 function cursor() {
     document.addEventListener("mousemove", function (data) {

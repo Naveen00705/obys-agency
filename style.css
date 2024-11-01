@@ -5,6 +5,7 @@
     color: #FFFFFF;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #151515;
+
 }
 
 html,
@@ -42,6 +43,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     gap: 1.7vw;
+    background-color: #000000;
 }
 
 #line1-part1 {
@@ -50,6 +52,7 @@ body {
     align-items: center;
     gap: 1.3vw;
     color: #fff;
+    background-color: #000000;
 }
 
 #line1-part1 h5 {
@@ -63,6 +66,7 @@ body {
     font-weight: 100;
     font-family: "Italiana", sans-serif;
     font-weight: 100;
+    background-color: #000000;
 }
 
 .line h2 {
@@ -71,6 +75,7 @@ body {
     text-transform: uppercase;
     font-family: "plain light";
     font-weight: 500;
+    background-color: #000000;
 }
 
 @keyframes anime {
@@ -112,6 +117,7 @@ body {
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
     opacity: 0;
+    background-color: #000000;
 }
 
 #main {
@@ -186,6 +192,7 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
+    display: none;
 }
 
 .vid-container {
@@ -254,7 +261,7 @@ body {
     border-radius: 2vw;
 }
 
-.page-4-content > p {
+.page-4-content>p {
     width: 40vw;
     font-size: 3vw;
 }
