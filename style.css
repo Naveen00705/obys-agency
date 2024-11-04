@@ -136,7 +136,7 @@ body {
     background-color: #151515;
     min-height: 100vh;
     width: 100%;
-    
+
 }
 
 /*  */
@@ -194,15 +194,17 @@ body {
     font-weight: 500;
     z-index: 99;
 }
+
 #hero::before {
     left: 24%;
-  
+
     content: "01";
     position: absolute;
     font-size: 3vw;
     font-family: 'silk serif';
     font-weight: 100;
 }
+
 .page3 {
     background-color: #151515;
     height: 100vh;
@@ -351,6 +353,8 @@ body {
 }
 
 .work {
+    position: relative;
+    min-height: 20vw;
     font-weight: 400;
     margin-bottom: 5vw;
 }
@@ -423,7 +427,8 @@ body {
 }
 
 .footer {
-    height: 80vh;
+
+    min-height: 200vh;
     width: 100%;
 }
 
@@ -458,6 +463,7 @@ body {
     font-family: 'silk serif';
     font-weight: 100;
 }
+
 .footer-content h1:hover {
     font-family: 'sans serif';
     font-style: italic;
@@ -509,4 +515,6 @@ body {
     width: 70vw;
     margin-left: 30vw;
     padding: 2vw 0;
+    /* margin-bottom:15vw ; */
+    border-bottom: 2px solid #ffff;
 }
