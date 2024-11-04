@@ -7,6 +7,9 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=League+Spartan:wght@100..900&display=swap"
         rel="stylesheet">
@@ -36,7 +39,8 @@
     </div>
 
     <div id="main">
-        <div class="page1">
+        
+        <div class="page1" data-scroll data-scroll-speed="-2.5">
             <div id="navbar">
                 <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
                     <path
@@ -76,9 +80,10 @@
                     <h4>Contact</h4>
                 </div>
             </div>
+
             <div id="hero">
                 <div class="hero-line" id="hero1">
-                    <h2>we design</h2>
+                    <h2 id="wd">we design</h2>
                 </div>
                 <div class="hero-line" id="hero2">
                     <h2>unique</h2>
@@ -92,10 +97,11 @@
                     <h2>Experience</h2>
                 </div>
             </div>
+            
         </div>
 
-        <div class="page2"></div>
-        <div class="page3">
+        <div class="page2" data-scroll data-scroll-speed="-2.5"></div>
+        <div class="page3" data-scroll data-scroll-speed="-2.5">
             <div class="page-3-cursor">
                 <i id="play" class="ri-play-large-fill"></i>
             </div>
@@ -107,7 +113,7 @@
 
 
 
-        <div class="page-4-content">
+        <div class="page-4-content" data-scroll data-scroll-speed="-2.5">
             <h1>About Obys</h1>
             <div class="page-4-line"></div>
             <p>
@@ -153,12 +159,14 @@
                 <h4>We Work With</h4>
             </div>
         </div>
-    </div>
-    <div class="page-5">
+  
+    <!-- <div class="page-5">
+
         <div class="elem-5">
             <h1>Sport - <span>Technology</span> - Fashion-</h1>
             <h1><span>Sports</span> - Technology - Fashion-</h1>
         </div>
+
         <div class="elem-5-rev">
             <h1><span>Science</span> - Travel - Techonology-</h1>
             <h1>Science - Travel - <span>Technology</span>-</h1>
@@ -168,27 +176,22 @@
             <h1>Sport - Technology - <span>Fashion-</span></h1>
             <h1>Sport - <span>Technology</span> - Fashion-</h1>
         </div>
+
         <div class="elem-5-rev">
             <h1><span>beauty</span> - realestate - Science-</h1>
             <h1>beauty - <span>Realestate</span> - Science-</h1>
         </div>
-    </div>
-
-    <!-- <div class="footer">
-            <div class="footer-content">
-                <h1>Let's Create</h1>
-                <i class="ri-arrow-right-line"></i>
-            </div>
-            <div class="page-4-linee"></div>
-        </div>
 
     </div> -->
 
-    <div class="footer">
+    <!-- <div class="footer">
+
         <div class="footer-content">
             <h1>Let's Create <i class="ri-arrow-right-line"></i></h1>
         </div>
+
         <div class="footer-linee"></div>
+
         <div class="footer-about">
             <div class="box1">
 
@@ -215,13 +218,16 @@
             </div>
 
         </div>
-        <div class="last-linee"></div>
-        <div class="copyright">
 
+        <div class="last-linee"></div>
+
+        <div class="copyright">
             Obys Agency © 2024
         </div>
-    </div>
 
+    </div> -->
+
+</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -229,7 +235,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+
     <script src="script.js"></script>
 </body>
 
