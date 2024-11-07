@@ -172,3 +172,22 @@ loader();
 page1();
 cursor();
 locomotiveAnimation()
+
+
+document.addEventListener('mousemove',function(dts){
+    gsap.to("#Flag",{
+        x:dts.x,
+        y:dts.y,
+    })
+})
+document.querySelector("#hero3").addEventListener("mouseenter",function(){
+    gsap.to("#Flag",{
+        opacity:1
+    })
+})
+
+document.querySelector("#hero3").addEventListener("mouseleave",function(){
+    gsap.to("#Flag",{
+        opacity:0
+    })
+})
