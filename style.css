@@ -16,15 +16,11 @@ body {
     background-color: #151515;
 }
 
-#cursor {
-    height: 2.3vw;
-    width: 2.3vw;
-    z-index: 11;
-    border-radius: 50%;
-    border: 1.5px solid white;
+#mousefollower {
+    border: 1px solid #fff;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     mix-blend-mode: difference;
-    transform: translate(-50%, -50%);
 }
 
 .loader {
@@ -214,8 +210,9 @@ body {
 }
 
 .vid-container {
-    height: 80vh;
-    width: 70vw;
+    height: 70vh;
+    width: 100vw;
+    margin: 10vh 0;
 }
 
 .vid-container video {
@@ -241,7 +238,13 @@ body {
     align-items: center;
 }
 
+
 #play {
+    background-color: #FFA63D;
+    font-size: 20px;
+}
+
+.page-3-cursor i {
     background-color: #FFA63D;
     font-size: 20px;
 }
@@ -271,7 +274,7 @@ body {
 .page-4-content h1::before {
     left: -7%;
     top: 17%;
-    content: "03";
+    content: "02";
     position: absolute;
     font-size: 3vw;
     font-family: 'silk serif';
@@ -457,7 +460,7 @@ body {
 .footer-content h1::before {
     left: -10%;
     top: 20%;
-    content: "04";
+    content: "03";
     position: absolute;
     font-size: 3vw;
     font-family: 'silk serif';

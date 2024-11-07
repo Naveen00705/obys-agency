@@ -1,3 +1,4 @@
+
 function locomotiveAnimation() {
 
     gsap.registerPlugin(ScrollTrigger);
@@ -31,10 +32,10 @@ function locomotiveAnimation() {
 
 }
 
-locomotiveAnimation();
+
 
 function loader() {
-    // document.querySelector(".loader").style.display = "none";
+    document.querySelector(".loader").style.display = "none";
     var tl = gsap.timeline();
 
     tl.from(".line h2", {
@@ -93,7 +94,6 @@ function loader() {
     });
 }
 
-loader();
 
 function page1() {
     var tl = gsap.timeline();
@@ -108,16 +108,67 @@ function page1() {
     });
 }
 
-page1();
+
 
 function cursor() {
-    document.addEventListener("mousemove", function (data) {
-        gsap.to("#cursor", {
-            left: data.x,
-            top: data.y,
+    Shery.mouseFollower({
+        skew: true,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1
+    })
+
+    Shery.makeMagnet(".nav-part2 h4");
+
+    var vidCont = document.querySelector(".vid-container")
+
+    vidCont.addEventListener("mouseenter", function () {
+        vidCont.addEventListener("mousemove", function (dets) {
+            gsap.to(".mousefollower", {
+                opacity: 0,
+            });
+            gsap.to(".page-3-cursor", {
+                left: dets.x,
+                y: dets.y
+            });
         });
     });
-    Shery.makeMagnet(".nav-part2 h4");
+
+    document.querySelector(".vid-container").addEventListener("mouseleave", function () {
+        gsap.to(".mousefollower", {
+            opacity: 1
+        });
+
+        gsap.to(".page-3-cursor", {
+            left: "70%",
+            top: "-15%"
+        })
+    });
+
+    var flag = 0
+
+
+    var video = document.querySelector(".vid-container video")
+    video.addEventListener("click", function () {
+        if (flag == 0) {
+            video.play()
+            document.querySelector(".page-3-cursor").innerHTML = ` <i class="ri-pause-large-fill"></i> `
+            gsap.to(".page-3-cursor", {
+                scale: 0.5
+            })
+            flag = 1
+        }
+        else {
+            video.pause()
+            document.querySelector(".page-3-cursor").innerHTML = ` <i class="ri-play-large-fill"></i> `
+            gsap.to(".page-3-cursor", {
+                scale: 1
+            })
+            flag = 0
+        }
+    })
 }
 
+loader();
+page1();
 cursor();
+locomotiveAnimation()
