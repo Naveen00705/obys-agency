@@ -33,9 +33,8 @@ function locomotiveAnimation() {
 }
 
 
-
 function loader() {
-    document.querySelector(".loader").style.display = "none";
+    // document.querySelector(".loader").style.display = "none";
     var tl = gsap.timeline();
 
     tl.from(".line h2", {
@@ -84,7 +83,7 @@ function loader() {
         y: 1000,
         opacity: 0,
         ease: "power2.out",
-        duration: 0.2,
+        duration: 0.4,
     });
     tl.from("#navbar", {
         opacity: 0,
@@ -110,84 +109,228 @@ function page1() {
 
 
 
-function cursor() {
-    Shery.mouseFollower({
-        skew: true,
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-        duration: 1
-    })
+// function cursor() {
 
+// function initializeMouseFollower() {
+//     Shery.mouseFollower({
+//         skew: true,
+//         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+//         duration: 1
+//     });
+// }
+
+// // Function to check screen width and activate/deactivate mouse follower
+// function checkScreenSize() {
+//     if (window.innerWidth >= 600) {
+//         // Only initialize mouse follower if the screen width is 600px or more
+//         if (typeof Shery !== 'undefined') {
+//             initializeMouseFollower();
+//         }
+//     } else {
+
+//         if (typeof Shery !== 'undefined' && Shery.mouseFollower) {
+//             Shery.mouseFollower.disable(); 
+//         }
+//     }
+// }
+
+
+// window.addEventListener('load', checkScreenSize);
+// window.addEventListener('resize', checkScreenSize);
+
+// Shery.makeMagnet(".nav-part2 h4");
+
+//     var vidCont = document.querySelector(".vid-container video")
+
+//     // vidCont.addEventListener("mouseenter", function () {
+//     //     vidCont.addEventListener("mousemove", function (dets) {
+//     //         gsap.to(".mousefollower", {
+//     //             opacity: 0,
+//     //         });
+
+//     //         gsap.to(".page-3-cursor", {
+//     //             left: dets.x,
+//     //             y: dets.y - 200
+//     //         });
+//     //     });
+//     // });
+
+//     // document.querySelector(".vid-container").addEventListener("mouseleave", function () {
+//     //     gsap.to(".mousefollower", {
+//     //         opacity: 1
+//     //     });
+
+//     //     gsap.to(".page-3-cursor", {
+//     //         left: "70%",
+//     //         top: "0%"
+//     //     })
+//     // });
+
+
+//     vidCont.addEventListener("mouseenter", function () {
+//         vidCont.addEventListener("mousemove", function (dets) {
+//             if (window.innerWidth >= 600) {  // Only move cursor if screen width is 600px or more
+//                 gsap.to(".mousefollower", { opacity: 0 });
+//                 gsap.to(page3Cursor, {
+//                     left: dets.x,
+//                     top: dets.y - 200
+//                 });
+//             }
+//         });
+//     });
+
+//     // Mouseleave event for the video container
+//     document.querySelector(".vid-container").addEventListener("mouseleave", function () {
+//         if (window.innerWidth >= 600) {  // Only reset cursor if screen width is 600px or more
+//             gsap.to(".mousefollower", { opacity: 1 });
+//             gsap.to(page3Cursor, {
+//                 left: "70%",
+//                 top: "0%"
+//             });
+//         }
+//     });
+
+
+
+//     var flag = 0
+//     var video = document.querySelector(".vid-container video  , page-3-cursor")
+//     video.addEventListener("click", function () {
+//         if (flag == 0) {
+//             video.play()
+//             document.querySelector(".page-3-cursor").innerHTML = ` <i class="ri-pause-large-fill"></i> `
+//             gsap.to(".page-3-cursor", {
+//                 scale: 0.5
+//             })
+//             flag = 1
+//         }
+//         else {
+//             video.pause()
+//             document.querySelector(".page-3-cursor").innerHTML = ` <i class="ri-play-large-fill"></i> `
+//             gsap.to(".page-3-cursor", {
+//                 scale: 1
+//             })
+//             flag = 0
+//         }
+//     })
+// }
+
+function cursor() {
+    // Initialize the mouse follower using Shery
+    function initializeMouseFollower() {
+        Shery.mouseFollower({
+            skew: true,
+            ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+            duration: 1
+        });
+    }
+
+    // Check screen size and activate/deactivate mouse follower based on width
+    function checkScreenSize() {
+        if (window.innerWidth >= 600) {
+            if (typeof Shery !== 'undefined') {
+                initializeMouseFollower();
+            }
+        } else {
+            if (typeof Shery !== 'undefined' && Shery.mouseFollower) {
+                Shery.mouseFollower.disable();
+            }
+        }
+    }
+
+    // Set up event listeners for load and resize events
+    window.addEventListener('load', checkScreenSize);
+    window.addEventListener('resize', checkScreenSize);
+
+    // Initialize Shery magnet effect on the specified element
     Shery.makeMagnet(".nav-part2 h4");
 
-    var vidCont = document.querySelector(".vid-container")
+    // Select the video element and cursor
+    const vidCont = document.querySelector(".vid-container video");
+    const page3Cursor = document.querySelector(".page-3-cursor");
+    let flag = 0;
 
-    vidCont.addEventListener("mouseenter", function () {
-        vidCont.addEventListener("mousemove", function (dets) {
-            gsap.to(".mousefollower", {
-                opacity: 0,
+    // Function to toggle video play/pause
+    function togglePlayPause() {
+        if (flag === 0) {
+            vidCont.play();
+            page3Cursor.innerHTML = `<i class="ri-pause-large-fill"></i>`;
+            gsap.to(page3Cursor,
+                {
+                    scale: 0.5,
+                    top: "3%"
+                });
+            flag = 1;
+        } else {
+            vidCont.pause();
+            page3Cursor.innerHTML = `<i class="ri-play-large-fill"></i>`;
+            gsap.to(page3Cursor, {
+                scale: 1,
+                top: "50%",
+                rotate: 360
             });
-            gsap.to(".page-3-cursor", {
+            flag = 0;
+        }
+    }
+
+    // Mousemove event to control cursor position, with screen width check
+    vidCont.addEventListener("mousemove", function (dets) {
+        if (window.innerWidth >= 600) {  // Only move cursor if screen width is 600px or more
+            gsap.to(".mousefollower", { opacity: 0 });
+            gsap.to(page3Cursor, {
                 left: dets.x,
-                y: dets.y
+                top: dets.y - 200
             });
-        });
+        }
     });
 
+    // Mouseleave event for the video container
     document.querySelector(".vid-container").addEventListener("mouseleave", function () {
-        gsap.to(".mousefollower", {
-            opacity: 1
-        });
-
-        gsap.to(".page-3-cursor", {
-            left: "70%",
-            top: "-15%"
-        })
+        if (window.innerWidth >= 600) {  // Only reset cursor if screen width is 600px or more
+            gsap.to(".mousefollower", { opacity: 1 });
+            gsap.to(page3Cursor, {
+                left: "70%",
+                top: "0%"
+            });
+        }
     });
 
-    var flag = 0
-
-
-    var video = document.querySelector(".vid-container video")
-    video.addEventListener("click", function () {
-        if (flag == 0) {
-            video.play()
-            document.querySelector(".page-3-cursor").innerHTML = ` <i class="ri-pause-large-fill"></i> `
-            gsap.to(".page-3-cursor", {
-                scale: 0.5
-            })
-            flag = 1
-        }
-        else {
-            video.pause()
-            document.querySelector(".page-3-cursor").innerHTML = ` <i class="ri-play-large-fill"></i> `
-            gsap.to(".page-3-cursor", {
-                scale: 1
-            })
-            flag = 0
-        }
-    })
+    // Click events for both the video and page-3-cursor to toggle play/pause
+    vidCont.addEventListener("click", togglePlayPause);
+    page3Cursor.addEventListener("click", togglePlayPause);
 }
 
+
+
+
+function flag() {
+
+    document.addEventListener('mousemove', function (dts) {
+        gsap.to("#Flag", {
+            x: dts.x,
+            y: dts.y,
+        })
+    })
+
+    document.querySelector("#hero3").addEventListener("mouseenter", function () {
+        gsap.to("#Flag", {
+            opacity: 1
+        })
+    })
+
+    document.querySelector("#hero3").addEventListener("mouseleave", function () {
+        gsap.to("#Flag", {
+            opacity: 0
+        })
+    })
+
+}
+
+locomotiveAnimation();
 loader();
 page1();
 cursor();
-locomotiveAnimation()
+flag();
 
 
-document.addEventListener('mousemove',function(dts){
-    gsap.to("#Flag",{
-        x:dts.x,
-        y:dts.y,
-    })
-})
-document.querySelector("#hero3").addEventListener("mouseenter",function(){
-    gsap.to("#Flag",{
-        opacity:1
-    })
-})
 
-document.querySelector("#hero3").addEventListener("mouseleave",function(){
-    gsap.to("#Flag",{
-        opacity:0
-    })
-})
+

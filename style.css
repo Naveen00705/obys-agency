@@ -16,11 +16,16 @@ body {
     background-color: #151515;
 }
 
+#main {
+    position: relative;
+}
+
 #mousefollower {
     border: 1px solid #fff;
     background-color: rgb(255, 255, 255);
     position: fixed;
     mix-blend-mode: difference;
+    border-radius: 50%;
 }
 
 .loader {
@@ -206,15 +211,20 @@ body {
     height: 20vw;
     position: absolute;
     top: 0;
-    left:0;    
-    transform:translate(-50% ,-50%);
+    left: 0;
+    transform: translate(-50%, -50%);
     opacity: 0;
 }
-#hero3{
-    
+
+#hero3,
+#hero2,
+#hero4 {
+
     z-index: 99999;
     position: relative;
 }
+
+
 .page3 {
     background-color: #151515;
     height: 100vh;
@@ -236,6 +246,8 @@ body {
     position: relative;
     left: 30vw;
 }
+
+
 
 .page-3-cursor {
     height: 20vh;
@@ -445,7 +457,7 @@ body {
 
 .footer {
 
-    min-height: 200vh;
+    min-height: 220vh;
     width: 100%;
 }
 
@@ -532,6 +544,312 @@ body {
     width: 70vw;
     margin-left: 30vw;
     padding: 2vw 0;
-    /* margin-bottom:15vw ; */
-    border-bottom: 2px solid #ffff;
+}
+
+
+@media (max-width:600px) {
+
+    .page1 {
+        min-height: 70vh;
+        padding-top: 1px;
+    }
+
+    #mousefollower {
+        display: none;
+    }
+
+    /*  */
+
+    #navbar {
+        justify-content: flex-end;
+        padding: 5vw 5vw;
+        width: 100%;
+    }
+
+    .nav-part2 {
+        display: none;
+    }
+
+    #svg {
+        scale: 0.9;
+    }
+
+    #hero {
+        padding: 30vw 4vw;
+        align-items: flex-start;
+        padding-top: 50vw;
+    }
+
+    #hero h2 {
+        font-size: 10vw;
+        line-height: 10.5vw;
+    }
+
+    #hero::before {
+        left: 5%;
+        font-size: 5vw;
+        top: 40%;
+    }
+
+    #Flag {
+        display: none;
+    }
+
+    .page3 {
+        height: fit-content;
+    }
+
+    .vid-container {
+        height: 60vh;
+        padding: 10vw 0;
+        margin: 0;
+        padding-top: 5vw;
+    }
+
+    .vid-container video {
+        left: 0;
+    }
+
+
+    .page-3-cursor {
+        height: 24vw;
+        width: 24vw;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .page-3-cursor i {
+        background-color: #FFA63D;
+        font-size: 3vw;
+    }
+
+
+    .page-4-content {
+        min-height: 100vh;
+        width: 100vw;
+        /* position: absolute; */
+        margin-left: 0;
+        padding: 15vw 5vw 2vw 5vw;
+
+
+    }
+
+    .page-4-content h1 {
+        font-weight: 550;
+        padding-bottom: 4vw;
+    }
+
+    .page-4-content h1::before {
+        left: 0%;
+        top: -55%;
+        content: "02";
+        font-size: 5vw;
+    }
+
+    .page-4-content h1:hover {
+        -webkit-text-stroke: 1.5px #FFFFFF;
+        color: transparent;
+    }
+
+    .page-4-line {
+        margin-bottom: 9vw;
+    }
+
+    .page-4-content>p {
+        width: 90vw;
+        font-size: 7vw;
+
+    }
+
+    .page-4-about {
+        flex-direction: column-reverse;
+        height: fit-content;
+        width: 90vw;
+        gap: 8vw;
+        margin-top: 2.5vw;
+    }
+
+    .page-4-about img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .page-4-about p {
+        font-size: 4.5vw;
+        width: 85%;
+        margin-top: 5vw;
+    }
+
+    .info {
+        height: auto;
+        width: 90vw;
+        padding: 4vw 3vw;
+        margin-top: 0;
+        margin-left: 0;
+        padding-bottom: 12vw;
+    }
+
+    .elem {
+        align-items: center;
+        padding: 6vw 1vw;
+        border-bottom: 1.5px solid white;
+    }
+
+    .elem h4 {
+        background-color: #3F7DF4;
+    }
+
+    .elem p {
+        background-color: #3F7DF4;
+        width: 35vw;
+    }
+
+    .page-4-linee {
+        margin: 16vw 0 6vw 0;
+    }
+
+    .work {
+        min-height: 3vw;
+        font-weight: 400;
+    }
+
+    .page-5 {
+        min-height: fit-content;
+        padding: 6vw 0vw;
+    }
+
+    .elem-5 {
+        margin-bottom: 2vw;
+    }
+
+    .elem-5 h1 {
+        font-size: 11vw;
+        -webkit-text-stroke: 1px #ffff;
+        font-weight: 300;
+        animation: anime 15s linear infinite;
+    }
+
+    @keyframes anime {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(-100% - 20px));
+        }
+    }
+
+    .elem-5-rev {
+        margin-bottom: 1.5vw;
+    }
+
+    .elem-5-rev h1 {
+        font-size: 11vw;
+        -webkit-text-stroke: 1px #ffff;
+        font-weight: 300;
+        animation: anime 15s linear infinite;
+        will-change: transform;
+        animation-direction: reverse;
+
+    }
+
+    .footer {
+        min-height: fit-content;
+        width: 100%;
+        padding: 10vw 2vw 5vw 2vw;
+    }
+
+    .footer-content h1 {
+        font-size: 11vw;
+        position: relative;
+        width: 80vw;
+    }
+
+    .footer-content {
+        width: 70vw;
+        margin-left: 0vw;
+    }
+
+    .footer-content h1::before {
+        left: 2%;
+        top: -30%;
+    }
+
+
+
+    .footer-linee {
+        margin: 1vw 0vw 10vw 2vw;
+        margin-left: 2vw;
+        width: 90vw;
+    }
+
+    .footer-about {
+        margin-left: 0vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2vw 2vw;
+    }
+
+    .box1 :nth-child(1) {
+        font-size: 5vw;
+        padding: 5vw 0 8vw 0;
+    }
+
+    .box1 {
+        margin-right: 10vw;
+    }
+
+    .box1 h5 {
+        font-size: 6vw;
+    }
+
+    #sayHi h5 {
+        margin-bottom: 3vw;
+
+    }
+
+    #sayy {
+        font-size: 4vw;
+    }
+
+    .last-linee {
+        width: 90vw;
+        margin-top: 20px;
+        margin-left: 2vw;
+    }
+
+    .copyright {
+        height: fit-content;
+        width: 90vw;
+        margin-left: 2vw;
+        padding: 8vw 0 4vw 0;
+        border-bottom: none;
+        font-size: 4vw;
+    }
+
+    .loader {
+        padding: 70vw 5vw;
+    }
+
+    .line {
+        gap: 2.7vw;
+    }
+
+    #line1-part1 h5,
+    #line1-part1 h6 {
+        font-size: 2.5vw;
+    }
+
+    .line h2 {
+        font-size: 8vw;
+
+    }
+
+    .line h3 {
+        font-size: 6.7vw;
+    }
+
+
 }
