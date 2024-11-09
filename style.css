@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'plain light';
     src: url(./assets/Fonts/plain-regular-webfont.ttf);
@@ -20,7 +21,8 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     color: #FFFFFF;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* background-color: #151515; */
@@ -58,19 +60,33 @@ body {
 }
 
 .line {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 1.7vw;
     background-color: #000000;
 }
 
 #line1-part1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 1.3vw;
     color: #fff;
     background-color: #000000;
@@ -102,6 +118,39 @@ body {
     font-family: "plain light";
     font-weight: 500;
     background-color: #000000;
+}
+
+@-webkit-keyframes animeh3 {
+    0% {
+        font-style: italic;
+        color: #FFFFFF;
+        opacity: 0;
+        font-family: 'plain light';
+        -webkit-text-stroke: 0.1px #ffffff;
+    }
+
+    40% {
+        color: #FFFFFF;
+        opacity: 1;
+        font-family: 'plain light';
+        -webkit-text-stroke: 0.1px #ffffff;
+    }
+
+    50% {
+        color: transparent;
+        font-family: "serif";
+        font-style: italic;
+        -webkit-text-stroke: 0.4px #ffffff;
+        opacity: 0;
+    }
+
+    100% {
+        color: transparent;
+        font-family: "serif";
+        font-style: italic;
+        -webkit-text-stroke: 0.1px #ffffff;
+        opacity: 1;
+    }
 }
 
 @keyframes animeh3 {
@@ -142,9 +191,12 @@ body {
     font-family: "plain light";
     font-weight: 500;
     color: #FFFFFF;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     opacity: 0;
     background-color: #000000;
 }
@@ -163,28 +215,47 @@ body {
 /*  */
 
 #navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 3vw 6vw;
 }
 
 .nav-part2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 3vw;
 }
 
 .nav-part2 h4 {
     font-size: 1.6vw;
     font-weight: 400;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #hero h2 {
@@ -197,10 +268,18 @@ body {
 }
 
 .hero-line {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     overflow: hidden;
     gap: 1vw;
 }
@@ -232,7 +311,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     opacity: 0;
 }
 
@@ -262,7 +343,8 @@ body {
 .vid-container video {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: relative;
     left: 30vw;
 }
@@ -279,9 +361,15 @@ body {
     right: 4%;
     top: -10%;
     z-index: 888;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -348,6 +436,8 @@ body {
 .page-4-about {
     height: 100vh;
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 2vw;
     margin-top: 2.5vw;
@@ -356,7 +446,8 @@ body {
 .page-4-about img {
     height: 100%;
     width: 40%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .page-4-about p {
@@ -375,9 +466,15 @@ body {
 }
 
 .elem {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: #3F7DF4;
     margin: 1vw 0;
     padding: 1vw 0;
@@ -429,17 +526,32 @@ body {
     color: transparent;
     display: inline-block;
     margin-right: 10px;
-    animation: anime 10s linear infinite;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;
     will-change: transform;
+}
+
+@-webkit-keyframes anime {
+    from {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+    }
 }
 
 @keyframes anime {
     from {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
 
     to {
-        transform: translateX(calc(-100% - 20px));
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
     }
 }
 
@@ -457,7 +569,8 @@ body {
     color: transparent;
     display: inline-block;
     margin-right: 10px;
-    animation: anime 10s linear infinite;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;
     will-change: transform;
     animation-direction: reverse;
 
@@ -485,6 +598,8 @@ body {
     /* background-color: red; */
     font-size: 8vw;
     font-weight: 500;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     padding: 2vw;
     min-height: 2em;
@@ -500,6 +615,8 @@ body {
     font-weight: 500;
     -webkit-text-stroke: 1.6px #ffff;
     color: transparent;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -533,8 +650,12 @@ body {
 
     width: 70vw;
     margin-left: 30vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 2vw 0;
 }
 
@@ -581,7 +702,9 @@ body {
     /*  */
 
     #navbar {
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         padding: 5vw 5vw;
         width: 100%;
     }
@@ -596,7 +719,9 @@ body {
 
     #hero {
         padding: 30vw 4vw;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         padding-top: 50vw;
     }
 
@@ -616,6 +741,8 @@ body {
     }
 
     .page3 {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
 
@@ -636,7 +763,9 @@ body {
         width: 24vw;
         right: 50%;
         top: 50%;
-        transform: translate(50%, -50%);
+        -webkit-transform: translate(50%, -50%);
+            -ms-transform: translate(50%, -50%);
+                transform: translate(50%, -50%);
     }
 
     .page-3-cursor i {
@@ -683,7 +812,12 @@ body {
     }
 
     .page-4-about {
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 90vw;
         gap: 8vw;
@@ -711,7 +845,9 @@ body {
     }
 
     .elem {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 6vw 1vw;
         border-bottom: 1.5px solid white;
     }
@@ -735,6 +871,8 @@ body {
     }
 
     .page-5 {
+        min-height: -webkit-fit-content;
+        min-height: -moz-fit-content;
         min-height: fit-content;
         padding: 6vw 0vw;
     }
@@ -747,16 +885,31 @@ body {
         font-size: 11vw;
         -webkit-text-stroke: 1px #ffff;
         font-weight: 300;
-        animation: anime 15s linear infinite;
+        -webkit-animation: anime 15s linear infinite;
+                animation: anime 15s linear infinite;
+    }
+
+    @-webkit-keyframes anime {
+        from {
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+        }
+
+        to {
+            -webkit-transform: translateX(calc(-100% - 20px));
+                    transform: translateX(calc(-100% - 20px));
+        }
     }
 
     @keyframes anime {
         from {
-            transform: translateX(0);
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
         }
 
         to {
-            transform: translateX(calc(-100% - 20px));
+            -webkit-transform: translateX(calc(-100% - 20px));
+                    transform: translateX(calc(-100% - 20px));
         }
     }
 
@@ -768,13 +921,16 @@ body {
         font-size: 11vw;
         -webkit-text-stroke: 1px #ffff;
         font-weight: 300;
-        animation: anime 15s linear infinite;
+        -webkit-animation: anime 15s linear infinite;
+                animation: anime 15s linear infinite;
         will-change: transform;
         animation-direction: reverse;
 
     }
 
     .footer {
+        min-height: -webkit-fit-content;
+        min-height: -moz-fit-content;
         min-height: fit-content;
         width: 100%;
         padding: 10vw 2vw 5vw 2vw;
@@ -806,9 +962,16 @@ body {
 
     .footer-about {
         margin-left: 0vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         padding: 2vw 2vw;
     }
 
@@ -841,6 +1004,8 @@ body {
     }
 
     .copyright {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 90vw;
         margin-left: 2vw;
