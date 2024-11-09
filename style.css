@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'plain light';
+    src: url(./assets/Fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family: 'plain light';
+    src: url(./assets/Fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: 'silk serif';
+    src: url(./assets/Fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: 'silk serif';
+    src: url(./assets/Fonts/silkserif-lightitalic-webfont.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -15,6 +34,7 @@ body {
     overflow-x: hidden;
     background-color: #151515;
 }
+
 
 #main {
     position: relative;

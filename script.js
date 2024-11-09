@@ -300,8 +300,6 @@ function cursor() {
 }
 
 
-
-
 function flag() {
 
     document.addEventListener('mousemove', function (dts) {
@@ -330,7 +328,6 @@ loader();
 page1();
 cursor();
 flag();
-
 
 
 
