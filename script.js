@@ -83,7 +83,7 @@ function loader() {
         y: 1000,
         opacity: 0,
         ease: "power2.out",
-        duration: 0.4,
+        duration: 1.5
     });
     tl.from("#navbar", {
         opacity: 0,

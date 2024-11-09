@@ -1036,5 +1036,23 @@ body {
         font-size: 6.7vw;
     }
 
+    .line-animation {
+        flex-direction: column;
+    align-items: flex-start;
+    }
 
+   #line1-part1 h5,
+#line1-part1 h6 {
+    font-size: 4.5vw;
+    font-weight: 100;
+}
+
+#line1-part1 {
+    gap: 2vw;
+}
+#line1-part1 h5 {
+    text-align: right;
+    width: 6.5vw;
+
+}
 }
