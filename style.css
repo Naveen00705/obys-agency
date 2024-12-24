@@ -1200,6 +1200,7 @@ body {
         padding: 8vw 2vw;
         z-index: 55;
         margin-bottom: 10vw;
+        display: none;
     }
 
     #page-animate h1 {

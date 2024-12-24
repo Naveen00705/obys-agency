@@ -39,7 +39,7 @@ function loader() {
     tl.from(".line h2", {
         y: 150,
         opacity: 0,
-        delay: 0.5,
+        delay: 0.2,
         duration: 0.6,
         stagger: 0.3
     });
@@ -102,6 +102,7 @@ function page1() {
         stagger: 0.2,
         onComplete: function () {
             document.querySelector(".page3").style.display = "block";
+            document.querySelector("#page-animate").style.display = "block";
         }
     });
 }
