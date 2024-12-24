@@ -1,5 +1,3 @@
-
-
 function locomotiveAnimation() {
 
     gsap.registerPlugin(ScrollTrigger);
@@ -35,7 +33,7 @@ function locomotiveAnimation() {
 
 
 function loader() {
-    document.querySelector(".loader").style.display = "none";
+    // document.querySelector(".loader").style.display = "none";
     var tl = gsap.timeline();
 
     tl.from(".line h2", {
@@ -327,7 +325,7 @@ function flag() {
 locomotiveAnimation();
 loader();
 page1();
-// cursor();
+cursor();
 flag();
 
 
